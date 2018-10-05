@@ -3,12 +3,35 @@
 We want to have a habit of making programs which are  easy to understand, simple to maintain, and a piece of cake to extend and reuse in the future.
 
 * rails new project_name
+* rails new myapp --database=postgresql
+    * /config/database.yml
+        * username = postrges
+        * password = pass
+* create the databases using pgadmin3
+* add the rails extension to VS Code
 * rails s
 * rails s -b $IP -p $PORT
+* /config/routes.rb
+    * resources :companies
+    * resources :persons 
 
+
+
+## prerequisites
+
+* WAPP
+* VS Code / atom / sublime
+* railsinstaller
+* gitbash
+* github account
+
+
+
+## routes
 * config/routes.rb
     * root "application#controller_name"
     * root "pages#home"
+* rails routes
 
 
 
@@ -79,9 +102,16 @@ class definition Company
         * there's a primary key 'id'. what's that for?  :)
         * new() doesn't save to the database
         * m.save    # saves the record to the database
+    * m = ModelName.new(parameter1: "value1" , param2: "val2", p3: "v3")     
     * [#<Company id: 1, prename: nil, company_name: nil, regtype: nil, streeta: nil, streetb: nil, streetc: nil, city: nil, region: nil, postcode: nil, country: nil>]
         * use the format to create new records from the console
-        
+    * m = ModelName.create()    # this saves automatically!  :)
+    * c_id = Company.find id_num   # primary key search
+        * c_id.streeta = "street address of c_id"
+    * c1 = Company.first       # gets the first record
+        * Company.last
+        * c.destroy
+    * reload!
 
 ## models
 * /app/models/model_name.rb
@@ -90,3 +120,9 @@ class definition Company
     * rails console:  ModelName.all 
         *  SELECT  "companies".* FROM "companies" LIMIT ? 
         
+
+## views
+
+* /app/views
+    * create folder for new controller
+        /app/views/companies

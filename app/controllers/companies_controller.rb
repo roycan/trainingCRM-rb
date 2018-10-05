@@ -1,7 +1,30 @@
 class CompaniesController < ApplicationController
 
-    def company
-        render plain: "hello companies"
+    def index
+
     end
 
+    def new
+        @company = Company.new
+    end
+
+    def create
+
+    end
+
+    def show
+
+    end
+
+    def edit
+
+    end
+
+    def update
+
+    end
+
+    def destroy
+
+    end
 end

@@ -1,0 +1,36 @@
+
+<div class="container">
+
+<h1> Have a New Company</h1>
+
+
+
+<%= form_for @company do |f| %>
+<p>
+  <%= f.label (:prename, "prename:") %> <br>
+  <%= f.text_field (:prename) %> <br>
+    <%= label_tag(:company_name, "company_name:") %> <br>
+    <%= text_field_tag(:company_name) %> <br>
+    <%= label_tag(:regtype, "regtype:") %> <br>
+    <%= text_field_tag(:regtype) %> <br>
+    <%= label_tag(:streeta, "streeta:") %> <br>
+    <%= text_field_tag(:streeta) %> <br>
+    <%= label_tag(:streetb, "streetb:") %> <br>
+    <%= text_field_tag(:streetb) %> <br>
+    <%= label_tag(:streetc, "streetc:") %> <br>
+    <%= text_field_tag(:streetc) %> <br>
+    <%= label_tag(:city, "city:") %> <br>
+    <%= text_field_tag(:city) %> <br>
+    <%= label_tag(:region, "region:") %> <br>
+    <%= text_field_tag(:region) %> <br>
+    <%= label_tag(:postcode, "postcode:") %> <br>
+    <%= text_field_tag(:postcode) %> <br>
+    <%= label_tag(:country, "country:") %> <br>
+    <%= text_field_tag(:country) %> <br> <br>
+
+    <%= submit_tag("Submit") %>
+  <% end %>
+  <div>
+
+
+
