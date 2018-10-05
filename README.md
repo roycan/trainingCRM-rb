@@ -126,3 +126,4 @@ class definition Company
 * /app/views
     * create folder for new controller
         /app/views/companies
+    
